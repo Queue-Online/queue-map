@@ -1,5 +1,9 @@
 # queue-map-webcomponent
 
+A web component showing a map with queues. Fetches all public queues or selected queues from the [Queue API](https://queue-api.northbricks.io/queue-admin-bff/queues) and displayus them on a map.
+
+See [demo](https://matsedel.wikman.nu/test/queue-map-webcomponent).
+
 ## Run
 
 ```sh
