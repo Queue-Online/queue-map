@@ -1,0 +1,45 @@
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+h1, h2, h3 {
+    color: #ccc;
+}
+
+pre {
+    font-family: monospace;
+    color: #0f0;
+    background-color: #222;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+p > code {
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+    background-color: #222;
+}
+
+thead {
+    background: #777;
+}
+
+tr {
+    border-bottom: 1px solid #000;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 0.25rem 0.75rem;
+}
+
+td:nth-child(2), td:nth-child(3), th:nth-child(2), t:nth-child(3) {
+    text-align: end;
+}

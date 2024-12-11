@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Queue Map Web Component</title>
+    <link rel="stylesheet" href="/build/queue-map-webcomponent.css" />
+    <script type="module" src="/build/queue-map-webcomponent.esm.js"></script>
+    <script nomodule src="/build/queue-map-webcomponent.js"></script>
+  </head>
+  <body>
+    <h1>Queue Map Webcomponent</h1>
+  
+    <p>
+      The queue map web component can be added to your website to show your queues on a map.
+    </p>
+  
+    <div style="max-width:600px;height:400px">
+      <queue-map center="59.334591,18.063240" zoom="9"></queue-map>
+    </div>
+
+    <h2>Installation</h2>
+  
+    <p>Import the script and add the component in your website.</p>
+
+      <pre>&lt;head&gt;
+  ...
+  &lt;-- Import element definition and auto-register --&gt;
+  &lt;script type="module" src="queue-map-webcomponent.esm.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+  &lt;-- Profit! --&gt;
+  &lt;queue-map center="59.334591,18.063240" zoom="9"&gt;&lt;/queue-map&gt;
+&lt;/body&gt;</pre>
+
+    <h3>Configuration parameters</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+          <th>Example value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>center</th>
+          <td>59.334591,18.063240</td>
+          <td>59.334591,18.063240</td>
+          <td>Center of the map to show.</td>
+        </tr>
+        <tr>
+          <th>queues</th>
+          <td>null</td>
+          <td>67578195b4447c276cb0828b, 67578195b4447c276cb0828b</td>
+          <td>Comma separated list of queue id to show on map. If none is specified all public queues will be displayed</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
