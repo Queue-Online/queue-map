@@ -47,8 +47,8 @@ Import the script and add the component in your website.
 
 ### Configuration parameters
 
-|  Name  |                           Default value |     Example value |          Description       |
-|--------|-----------------------------------------|-------------------|----------------------------|
-| center | 59.334591,18.063240 59.334591,18.063240 | See default value | Center of the map to show. |
-| zoom   |                                      10 |                10 | Initial map zoom level.    |
-| queues |                                    null | 67578195b4447c276cb0828b, 67578195b4447c276cb0828b | Comma separated list of queue id to show on map. If none is specified all public queues will be displayed |
+|  Name  |     Default value   |   Example value   |          Description       |
+|--------|---------------------|-------------------|----------------------------|
+| center | 59.334591,18.063240 | See default value | Center of the map to show. |
+| zoom   |                  10 |                10 | Initial map zoom level.    |
+| queues |                null | 67578195b4447c276cb0828b,67578195b4447c276cb0828b | Comma separated list of queue id to show on map. If none is specified all public queues will be displayed |
