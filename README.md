@@ -2,7 +2,7 @@
 
 A web component showing a map with queues. Fetches all public queues or selected queues from the [Queue API](https://queue-api.northbricks.io/queue-admin-bff/queues) and displays them on a map.
 
-See [demo](https://matsedel.wikman.nu/test/queue-map-webcomponent).
+See [demo](https://www.jonwikman.com/cdn/).
 
 ## Run
 
@@ -35,12 +35,12 @@ Import the script and add the component in your website.
 ```html
 <head>
   ...
-  <-- Import element definition and auto-register -->
-  <script type="module" src="queue-map-webcomponent.esm.js"></script>
+  <!-- Import element definition and auto-register -->
+  <script type="module" src="https://www.jonwikman.com/cdn/queue-map-webcomponent.esm.js"></script>
 </head>
 <body>
   ...
-  <-- Profit! -->
+  <!-- Profit! -->
   <queue-map center="59.334591,18.063240" zoom="9"></queue-map>
 </body>
 ```
