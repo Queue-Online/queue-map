@@ -9,13 +9,14 @@ L.Icon.Default.mergeOptions({
 });
 
 type Queue = {
+  id: string,
+  name: string,
+  description: string,
+  categories: string[],
   location: {
     latitude: number,
     longitude: number
   },
-  name: string,
-  description: string,
-  categories: string[],
   images: {
     uri: string
   }[]
@@ -76,16 +77,26 @@ export class QueueMap {
     this.updateMarkers();
   }
 
+  openMarkerPopup = null;
   @Watch('markers')
   watchMarkers(newValue: L.Marker[], oldValue: L.Marker[]) {
-    oldValue
-      .filter(marker => !marker.isPopupOpen())
-      .forEach((marker) => {
-        this.map.removeLayer(marker);
-      })
+    if (this.openMarkerPopup && !this.openMarkerPopup.isPopupOpen()) {
+      this.map.removeLayer(this.openMarkerPopup);
+      this.openMarkerPopup = null;
+    }
 
-    newValue.forEach( (marker) => {
-      marker.addTo(this.map);
+    oldValue.forEach((marker) => {
+      if (marker.isPopupOpen()) {
+        this.openMarkerPopup = marker
+      } else {
+        this.map.removeLayer(marker);
+      }
+    })
+
+    newValue.forEach((marker) => {
+      if (!this.openMarkerPopup || this.openMarkerPopup.options.queueId != marker.options.queueId) {
+        marker.addTo(this.map);
+      }
     })
   }
 
@@ -95,7 +106,6 @@ export class QueueMap {
   }
 
   render() {
-    console.log('render called')
     return <div id="map" style={this.style}></div>
   }
 
@@ -170,7 +180,10 @@ export class QueueMap {
   }
 
   private toMarker(queue: Queue) {
-    let markerOptions: any = { title: queue.name };
+    let markerOptions: any = {
+      title: queue.name,
+      queueId: queue.id
+    };
     if (queue.categories.indexOf("PARKING") > -1) {
       markerOptions.icon = QueueMap.parkingIcon;
     }
