@@ -29,11 +29,17 @@ To integrate the Queue Map Web Component into your website, follow these steps:
 2. **Add the Component to Your Page**: Place the `<queue-map>` element in the desired location within the `<body>`, configuring its attributes as needed.
 
     ```html
-    <body>
-      ...
-      <!-- Display the queue map -->
-      <queue-map center="59.334591,18.063240" zoom="9"></queue-map>
-    </body>
+    <head>
+  ...
+  <!-- Import element definition and auto-register -->
+  <script type="module" src="https://www.jonwikman.com/cdn/queue-map-webcomponent.esm.js"></script>
+</head>
+<body>
+  ...
+  <!-- Profit! -->
+  <queue-map center="59.334591,18.063240" zoom="9"></queue-map>
+</body>
+    
     ```
 
 ## Configuration Parameters
